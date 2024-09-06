@@ -22,7 +22,8 @@ function Home() {
         formData.append("file", selectedFile)
         setConvert("Processing...")
         try {
-            const response = await axios.post("http://localhost:3000/convertFile", formData, {
+            const response = await axios.post("https://word-to-pdf-mu.vercel.app/
+/convertFile", formData, {
                 responseType: "blob"
             })
             const url = window.URL.createObjectURL(new Blob([response.data]))
