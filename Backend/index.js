@@ -9,7 +9,13 @@ const cors = require("cors")
 const app = express();
 const port = 3000;
 
-app.use((cors()))
+app.use((cors(
+  {
+    origin: "https://deploy-mern-1whq.vercel.app",
+    methods: ["POST","GET"],
+    credentials: true
+  }
+)))
 app.use(express.json());
 
 //setting up the file storage
